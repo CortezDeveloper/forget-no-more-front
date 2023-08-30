@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom"
 
 import { UserContext } from "./../context/AuthContext"
 import service from "./../api/service"
-// import { toFormData } from 'axios'
+import NavBar from '../components/Navbar'
+
 
 
 function CreateProduct() {
@@ -14,9 +15,8 @@ function CreateProduct() {
 
   const [productData, setProductData] = useState({
     image: "",
-    name: "",
+    productName: "",
     price: "",
-    brand: "",
     description: "",
   })
   console.log(productData)
@@ -28,16 +28,11 @@ function CreateProduct() {
 
     try {
       const response = await service.post(
-        "http://localhost:5005/api/products",
+        "/api/products",
         productData
       )
-
-      if(response.data) {
-        await authenticateUser();
-        navigate("/")
-      } else {
-        setError(response.status)
-      }
+      navigate("/products")
+      
     } catch (error) {
       console.log(error)
       setError(error.response.data.message)
@@ -47,6 +42,7 @@ function CreateProduct() {
 
   return (
     <div>
+      <NavBar />
       <h1>Create Product</h1>
       <form onSubmit={handleSubmit}>
         <label>Product Image URL</label>
@@ -63,9 +59,9 @@ function CreateProduct() {
         <input 
           type="text"
           placeholder="Insert product name.."
-          value={productData.name}
+          value={productData.productName}
           onChange={(event) =>
-              setProductData({...productData, name: event.target.value})
+              setProductData({...productData, productName: event.target.value})
           } />
 
         <label>Product Price</label>
@@ -77,14 +73,7 @@ function CreateProduct() {
               setProductData({...productData, price: event.target.value})
           } />
 
-        <label>Product Brand</label>
-        <input 
-          type="text"
-          placeholder="Insert product brand.."
-          value={productData.brand}
-          onChange={(event) =>
-              setProductData({...productData, brand: event.target.value})
-          } />
+    
 
         <label>Product Description</label>
         <input 
@@ -94,9 +83,11 @@ function CreateProduct() {
           onChange={(event) =>
               setProductData({...productData, description: event.target.value})
           } />
-        <button onClick ={() => handleSubmit}>Create Product</button> 
+        <button>Create Product</button> 
+       
 
       </form>
+      
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "./../context/AuthContext"
+import NavBar from "./../components/NavBar"
 
 function LoginPage({ storeUser }) {
 	const [user, setUser] = useState({ email: "", password: "" })
@@ -34,10 +35,47 @@ async function handleSubmit(e) {
 
 	}
 
+	return (
+		<div>
+			<NavBar />
+			<h2>Login</h2>
+			<form onSubmit={handleSubmit}>
+				<div>
+					<label htmlFor="email">E-mail: </label>
+					<input
+						type="email"
+						id="email"
+						value={user.email}
+						onChange={(e) =>
+							setUser({ ...user, [e.target.id]: e.target.value })
+							// setUser({ ...user, email: e.target.value })
+						}
+					/>
+				</div>
+				<div>
+					<label htmlFor="password">Password: </label>
+					<input
+						type="password"
+						id="password"
+						value={user.password}
+						onChange={(e) =>
+							setUser({ ...user, [e.target.id]: e.target.value })
+							// setUser({ ...user, password: e.target.value })
+						}
+					/>
+				</div>
+				{error && <p>{error}</p>}
+				<button>Login</button>
+			</form>
+		</div>
+	)
+	}
+	
+	export default LoginPage;
 
 
 
-
+	
 
 	
 // 		await authenticateUser(user.userName, user.email, user.password);
@@ -75,39 +113,3 @@ async function handleSubmit(e) {
 	// 	}
 	// }
 
-	return (
-		<div>
-			<h2>Login</h2>
-			<form onSubmit={handleSubmit}>
-				<div>
-					<label htmlFor="email">E-mail: </label>
-					<input
-						type="email"
-						id="email"
-						value={user.email}
-						onChange={(e) =>
-							setUser({ ...user, [e.target.id]: e.target.value })
-							// setUser({ ...user, email: e.target.value })
-						}
-					/>
-				</div>
-				<div>
-					<label htmlFor="password">Password: </label>
-					<input
-						type="password"
-						id="password"
-						value={user.password}
-						onChange={(e) =>
-							setUser({ ...user, [e.target.id]: e.target.value })
-							// setUser({ ...user, password: e.target.value })
-						}
-					/>
-				</div>
-				{error && <p>{error}</p>}
-				<button>Login</button>
-			</form>
-		</div>
-	)
-}
-
-export default LoginPage;

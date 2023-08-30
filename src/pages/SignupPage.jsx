@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import NavBar from "./../components/NavBar"
 
 function SignupPage() {
 	const [user, setUser] = useState({ userName: "", email: "", password: "" })
@@ -30,6 +31,7 @@ function SignupPage() {
 	}
 	return (
 		<div>
+			<NavBar /> 
 			<h2>Signup</h2>
 			<form onSubmit={handleSubmit}>
 				<div>
