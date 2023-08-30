@@ -1,0 +1,31 @@
+.links-to-pages {
+
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    border: 2px solid white;
+    height: 90px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    padding: 0 1rem;
+    top: 0;
+    right: 0;
+  
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+  }
+
+  .nav-link{
+    color:maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+  }
+ 

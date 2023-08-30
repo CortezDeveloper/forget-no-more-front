@@ -2,6 +2,10 @@ import myApi from "../api/service";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom"
 import {useState, useEffect} from 'react'
+import "./../style/NavBar.css"
+import "./../style/Products.css"
+
+
 function Products({ handleClick }) {
   const [products, setProducts] = useState([]); 
   useEffect(() => {
@@ -21,9 +25,9 @@ function Products({ handleClick }) {
   return (
     <div>
       <Navbar />
-      <div className="productDetails">
+      <div className="card">
         {products.map((product) => (
-          <div className="details" key={product._id}>
+          <div className="itemCard" key={product._id}>
             <Link to={`/product/${product._id}`}>
               <img
                     className="productPicture"
@@ -33,14 +37,16 @@ function Products({ handleClick }) {
                   />
             </Link> 
             {/* <img src={product.image} alt={product.name} /> */}
-            <h1>{product.name}</h1>
-            <h2>Description:</h2>
-            <p>{product.description}</p>
-            <h2>Price</h2>
-            <p>$ {product.price}</p>
-            <button className="button" onClick={() => handleClick(product)}>
-              Add to bag
-            </button>
+            <div className="cardDetail">  
+              <h1>{product.name}</h1>
+              <h2 className="titleName">Description:</h2>
+              <p className = "description">{product.description}</p>
+              <h2>Price</h2>
+              <p className="description">$ {product.price}</p>
+              <button className="button" onClick={() => handleClick(product)}>
+                Add to bag
+             </button>
+            </div>
           </div>
         ))}
       </div>

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import LogoutButton from "./LogOut"
+import "./../style/NavBar.css"
 // import Search from "./Search"
 // import logoFnm from "./../"
 
@@ -8,8 +10,8 @@ function NavBar() {
   return (
     <>
       <nav>
-        <div className="links">
-          <p className="text-black text-[18px] font-bold cursor-pointer flex">
+        <div className="links-to-pages">
+          <p className="logo-forget-no-more">
             <span className="sm:block hidden"> FORGET NO MORE </span>
           </p>
 
@@ -26,9 +28,10 @@ function NavBar() {
           <Link to="/signup" className="nav-link">
             Signup
           </Link>
-          <Link to="/cart" classname="nav-link">
+          <Link to="/cart" className="nav-link">
             Cart
           </Link>
+          <LogoutButton />
           {/* <Link to="/cart" className="nav-link">
             <CartCountBadge/>
           </Link> */}

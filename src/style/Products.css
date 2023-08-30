@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .itemCard {
+    width: 20vw;
+    align-content: space-around !important;
+    margin-bottom: 2rem;
+  }
+  
+  .productPicture {
+    border-radius: 1rem;
+  }
+  .titleName {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 1rem !important;
+    text-align: center;
+    width: 20vw;
+  }
+  
+  .cardDetail {
+    align-content: space-around;
+  }
+  
+  .productDetail {
+    font-size: 1rem !important;
+    margin: 0;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+

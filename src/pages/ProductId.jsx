@@ -47,7 +47,7 @@ function ProductId({ handleClick }) {
           <button className="button" onClick={() => handleClick(product)}>
             Add to bag
           </button>
-          {user?.admin && <button className="button" onClick={handleEditClick}>Edit</button>}
+          {user.admin && (<button className="button" onClick={handleEditClick}>Edit</button>)}
         </div>
       </div>
   )
