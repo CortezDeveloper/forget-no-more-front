@@ -3,7 +3,7 @@ import service from '../api/service';
 import { useNavigate, useParams } from "react-router-dom"
 // import { UserContext } from "./../context/AuthContext";
 import myApi from '../api/service';
-import NavBar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 
 function EditProduct() {
     const navigate = useNavigate()

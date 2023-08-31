@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import NavBar from "./../components/Navbar";
+import NavBar from "./../components/NavBar";
 import myApi from "../api/service";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/AuthContext";

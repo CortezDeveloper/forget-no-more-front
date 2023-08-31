@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 import { UserContext } from "./../context/AuthContext"
 import service from "./../api/service"
-import NavBar from '../components/Navbar'
+import NavBar from "../components/NavBar"
 
 
 
