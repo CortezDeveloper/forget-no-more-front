@@ -19,7 +19,7 @@
     padding: 0 1rem;
     top: 0;
     right: 0;
-  
+    border: 1px solid black;
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
   }
 
@@ -28,4 +28,15 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 25px;
   }
- 
+
+  .buttons-container {
+    display: flex;
+    gap: 30%; /* Adjust the value to control the spacing */
+    justify-content: center; /* Center the buttons horizontally */
+    margin: 20px 0; /* Add vertical margin */
+  }
+  
+  .button{
+    color: maroon;
+  }
+

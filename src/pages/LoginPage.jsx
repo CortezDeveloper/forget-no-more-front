@@ -5,6 +5,8 @@ import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "./../context/AuthContext"
 import NavBar from "./../components/NavBar"
+import Login from "./../style/Login.css"
+import Footer from "../components/Footer";
 
 function LoginPage({ storeUser }) {
 	const [user, setUser] = useState({ email: "", password: "" })
@@ -39,9 +41,11 @@ async function handleSubmit(e) {
 		<div>
 			<NavBar />
 			<h2>Login</h2>
+			<br></br>
+			<br></br>
 			<form onSubmit={handleSubmit}>
 				<div>
-					<label htmlFor="email">E-mail: </label>
+					<label htmlFor="email" className="mail">E-mail: </label>
 					<input
 						type="email"
 						id="email"
@@ -52,8 +56,10 @@ async function handleSubmit(e) {
 						}
 					/>
 				</div>
+				<br></br>
+				<br></br>
 				<div>
-					<label htmlFor="password">Password: </label>
+					<label htmlFor="password" className="mail">Password: </label>
 					<input
 						type="password"
 						id="password"
@@ -65,8 +71,11 @@ async function handleSubmit(e) {
 					/>
 				</div>
 				{error && <p>{error}</p>}
+				<br></br>
+				<br></br>
 				<button>Login</button>
 			</form>
+			<Footer/>
 		</div>
 	)
 	}

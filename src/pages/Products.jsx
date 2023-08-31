@@ -4,10 +4,13 @@ import { Link } from "react-router-dom"
 import {useState, useEffect} from 'react'
 import "./../style/NavBar.css"
 import "./../style/Products.css"
+import "./../components/Footer"
+import Footer from "./../components/Footer";
 
 
-function Products({ handleClick }) {
+function Products() {
   const [products, setProducts] = useState([]); 
+  const [cart, setCart] = useState([])
   useEffect(() => {
     myApi
       .get(`/api/products`)
@@ -21,7 +24,21 @@ function Products({ handleClick }) {
   if (products.length === 0) {
     return <div className="loading">Data is being loaded...</div>;
   }
-
+  const handleClick = (item) => {
+		console.log(item._id)
+		const cartCopy = structuredClone(cart);
+		const foundProduct = cartCopy.find((product) => product._id === item._id)
+		if(!foundProduct) {
+			item.quantity = 1
+			setCart([...cartCopy, item])
+			console.log(item)
+		} else {
+			foundProduct.quantity++
+			console.log(item)
+			setCart(cartCopy)
+		}
+		console.log(cart, cart.length)
+	}
   return (
     <div>
       <Navbar />
@@ -36,13 +53,14 @@ function Products({ handleClick }) {
                     width={200}
                   />
             </Link> 
+          
             {/* <img src={product.image} alt={product.name} /> */}
-            <div className="cardDetail">  
+            <div className="cardDetail"> <br></br> 
               <h1>{product.name}</h1>
-              <h2 className="titleName">Description:</h2>
-              <p className = "description">{product.description}</p>
+              {/* <h2 className="titleName">Description:</h2> */}
+              <p className = "description">{product.description}</p><br></br>
               <h2>Price</h2>
-              <p className="description">$ {product.price}</p>
+              <p className="description">$ {product.price}</p><br></br>
               <button className="button" onClick={() => handleClick(product)}>
                 Add to bag
              </button>
@@ -50,6 +68,7 @@ function Products({ handleClick }) {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

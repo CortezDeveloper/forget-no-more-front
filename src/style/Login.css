@@ -1,0 +1,45 @@
+h2{
+    color: maroon;
+}
+
+/* Your existing CSS */
+/* Your existing CSS */
+
+#email, #password {
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Horizontally center the elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Vertically center the content */
+   
+  }
+  
+  #email input, #password input {
+    width: 100%;
+    padding: 30%;
+    margin: 5px 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+  }
+  
+  #email label,
+  #password label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+/*   
+  button{
+    border: 2px solid black;
+  } */
+  .mail{
+    color:maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+
+  .button{
+    border: 2px solid black;
+  }

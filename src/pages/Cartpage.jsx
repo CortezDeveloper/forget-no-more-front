@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./../components/NavBar"
+import Footer from "./../components/Footer"
+import Cartpage from "./../style/Cartpage.css"
 
 function Cart({ cart, setCart }) {
   const [quantity, setQuantity] = useState(1);
@@ -18,18 +21,20 @@ function Cart({ cart, setCart }) {
     cartCopy.splice(product, 1);
     setCart(cartCopy);
   };
+  console.log(cart)
 
   if (!cart) {
     return <div className="loading">Shopping Cart</div>;
   }
   return (
     <div>
-      <h1>Cart</h1>
+      <NavBar />
+      <h1 className="cart">Cart</h1>
       <h3>Total price</h3>
       <p>
         ${" "}
         {cart
-          .reduce((acc, item) => acc + item.currentPrice * item.quantity, 0)
+          .reduce((acc, item) => acc + item.price * item.quantity, 0)
           .toFixed(2)}
       </p>
       <Link to={`/PurchaseOrderPage`}>
@@ -40,7 +45,7 @@ function Cart({ cart, setCart }) {
       {cart.map((product) => {
         return (
           <div className="cartSingleItem">
-            <div className="moreOrLess" key={product.id}>
+            <div className="moreOrLess" key={product._id}>
               <img
                 className="cartProductPicture"
                 src={`${product.image}`}
@@ -84,6 +89,7 @@ function Cart({ cart, setCart }) {
           </div>
         );
       })}
+      <Footer />
     </div>
   );
 }

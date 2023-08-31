@@ -1,0 +1,85 @@
+/* Footer.css */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Distribute content horizontally */
+  /* align-items:start;  */
+  right: 0;
+  border: 1px solid black;
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+  
+  .footer h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .p-a {
+    color: #000000;
+    text-decoration: none;
+    color:maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  
+  
+  .p-a:hover {
+    text-decoration:none;
+  }
+  
+  .footer address {
+    margin-top: 10px;
+    font-style: normal;
+    color:maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  
+  .footer p {
+    margin: 10px 0;
+  }
+  
+  .footerfour {
+    margin-top: 20px;
+  }
+  
+  .footerdev p {
+    font-size: 14px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: maroon;
+  }
+  .nav-link{
+    margin-top: 10px;
+    margin-left: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    color: maroon;
+    
+  }
+  
+  /* Optional: Adding some spacing and alignment for smaller screens */
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 20px 10px;
+    }
+  
+    .footerone h1 {
+      font-size: 20px;
+    }
+  
+    .footerfour p {
+      font-size: 12px;
+    }
+   
+  }
+  

@@ -1,15 +1,17 @@
 import React from 'react'
 import NavBar from './../components/NavBar'
-import Banner from './../assets/images/fnmbanner.jpg'
-import "./../style/App.css"
+import Footer from './../components/Footer'
+import Banner from './../components/Banner'
+import Form from './../components/Form'
+
+
 
 function HomePage() {
   return (
     <div>
       <NavBar />
-      <img className="img-banner" src={Banner} />
-   
-      
+      <Banner />
+      <Footer />
     </div>
  
   )

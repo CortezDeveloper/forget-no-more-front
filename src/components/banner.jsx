@@ -1,12 +1,14 @@
 import React from 'react'
-// import Banner from "./../assets/images/"
+import "./../style/App.css"
+import Bannerimg from "./../assets/images/fnmbanner.jpg"
 
-function banner() {
+function Banner() {
   return (
     <div>
-        
+      <img className="img-banner" src={Bannerimg} />
+      
     </div>
   )
 }
 
-export default banner
+export default Banner 

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import NavBar from "./../components/NavBar"
+import Signup from "./../style/Signup.css"
+import Footer from "./../components/Footer"
 
 function SignupPage() {
 	const [user, setUser] = useState({ userName: "", email: "", password: "" })
@@ -32,10 +34,11 @@ function SignupPage() {
 	return (
 		<div>
 			<NavBar /> 
-			<h2>Signup</h2>
+			<h2>Signup</h2><br></br>
+			<br></br>
 			<form onSubmit={handleSubmit}>
 				<div>
-					<label htmlFor="username">Username: </label>
+					<label htmlFor="username" className="userName">Username: </label><br></br>
 					<input
 						type="text"
 						value={user.userName}
@@ -45,8 +48,10 @@ function SignupPage() {
 						}
 					/>
 				</div>
+				<br></br>
+				<br></br>
 				<div>
-					<label htmlFor="email">E-mail: </label>
+					<label htmlFor="email" className="userName">E-mail: </label>
 					<input
 						type="email"
 						id="email"
@@ -56,8 +61,10 @@ function SignupPage() {
 						}
 					/>
 				</div>
+				<br></br>
+				<br></br>
 				<div>
-					<label htmlFor="password">Password: </label>
+					<label htmlFor="password" className="userName">Password: </label>
 					<input
 						type="password"
 						id="password"
@@ -67,9 +74,11 @@ function SignupPage() {
 						}
 					/>
 				</div>
-				<p className="error">{error}</p>
+				<p className="error">{error}</p><br></br>
+				<br></br>
 				<button>Signup</button>
 			</form>
+			<Footer />
 		</div>
 	)
 }

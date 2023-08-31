@@ -16,19 +16,20 @@ function App() {
 	const [cart, setCart] = useState([])
 
 	const handleClick = (item) => {
-		const cartCopy = structuredClone(cart);
-		const foundProduct = cartCopy.find((product) => product.id === item.id)
-		if(!foundProduct) {
-			item.quantity = 1
-			setCart([...cartCopy, item])
-			console.log(item)
-		} else {
-			foundProduct.quantity++
-			console.log(item)
-			setCart(cartCopy)
-		}
+		console.log(item)
+		// const cartCopy = structuredClone(cart);
+		// const foundProduct = cartCopy.find((product) => product.id === item.id)
+		// if(!foundProduct) {
+		// 	item.quantity = 1
+		// 	setCart([...cartCopy, item])
+		// 	console.log(item)
+		// } else {
+		// 	foundProduct.quantity++
+		// 	console.log(item)
+		// 	setCart(cartCopy)
+		// }
+		// console.log(cart, cart.length)
 	}
-	console.log(cart, cart.length)
 
 
 
