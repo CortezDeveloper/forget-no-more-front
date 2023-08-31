@@ -10,6 +10,7 @@ import ProductId from "./pages/ProductId"
 import EditProduct from "./pages/EditProductPage"
 import { useState } from "react"
 import CreateProduct from "./pages/CreateProduct"
+import PurchaseOrderPage from "./pages/PurchaseOrder"
 
 function App() {
 	const [cart, setCart] = useState([])
@@ -44,6 +45,7 @@ function App() {
 				<Route path="/createproduct" element={<CreateProduct />} />
 				<Route path="/product/:id/edit" element={<EditProduct />} />
  				<Route path="/cart" element={<CartPage handle={handleClick} cart={cart} setCart={setCart}/>} />
+				<Route path="/PurchaseOrderPage" element={<PurchaseOrderPage />} />
 				{/* Added a Route protection, see IsLoggedIn component for more info */}
 				{/* <Route
 					path="/favorites"

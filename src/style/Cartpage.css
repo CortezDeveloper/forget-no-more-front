@@ -1,5 +1,85 @@
-.cart{
-    color:maroon;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-}
+
+  
+  .cart {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .total-price {
+    font-size: 18px;
+  }
+  
+  .button {
+    background-color: #FFFFFF;
+    border-radius: 1px solid black;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .cartSingleItem {
+    display: flex;
+    align-items:last baseline;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .cartProductPicture {
+    max-width: 100px;
+    margin-right: 20px;
+  }
+  
+  .nameAndQuantity {
+    flex-grow: 1;
+  }
+  
+  .buttonCart {
+    background-color:azure;
+    
+    color: black;
+   
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .productQuantity {
+    margin: 0 10px;
+  }
+  
+  .deleteButton {
+    background-color: #dc3545;
+  }
+  
+  .priceCart {
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .cartSingleItem {
+      flex-direction: column;
+    }
+  
+    .cartProductPicture {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nameAndQuantity {
+      margin-top: 10px;
+    }
+  
+    .buttonCart {
+      margin: 5px 0;
+    }
+  
+    .productQuantity {
+      margin: 5px 0;
+    }
+  }
+  

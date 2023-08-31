@@ -1,0 +1,43 @@
+/* FormLayout.css */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .input-field {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .button {
+    background-color: seashell;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .form-container {
+      max-width: 100%;
+    }
+  }
+  

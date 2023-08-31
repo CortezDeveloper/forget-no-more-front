@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import service from '../api/service';
 import { useNavigate, useParams } from "react-router-dom"
+import "./../style/EditPage.css"
 // import { UserContext } from "./../context/AuthContext";
 import myApi from '../api/service';
 import NavBar from '../components/NavBar';
@@ -63,28 +64,36 @@ console.log(response.data)
           <NavBar />
       </div>
       <div>
+          <h3>ImageURL</h3>
           <input
+          className="input-field"
             type="url"
             value={editedData.image}
             onChange={(e) =>
               setEditedData({ ...editedData, image: e.target.value })
             }
           />
+          <h3>Product Name</h3>
           <input
+          className="input-field"
             type="string"
             value={editedData.productName}
             onChange={(e) =>
               setEditedData({ ...editedData, productName: e.target.value })
             }
           />
+          <h3>Price</h3>
           <input
+          className="input-field"
             type="number"
             value={editedData.price}
             onChange={(e) =>
               setEditedData({ ...editedData, price: e.target.value })
             }
           />
+          <h3>Description</h3>
           <input
+          className="input-field"
             type="string"
             value={editedData.description}
             onChange={(e) =>

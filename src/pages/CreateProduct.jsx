@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { UserContext } from "./../context/AuthContext"
 import service from "./../api/service"
 import NavBar from "../components/NavBar"
+import "./../style/CreateProduct.css"
 
 
 
@@ -43,10 +44,11 @@ function CreateProduct() {
   return (
     <div>
       <NavBar />
-      <h1>Create Product</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Product Image URL</label>
+      <h1>Create Product</h1><br></br>
+      <form className="form-container" onSubmit={handleSubmit}>
+        <label className="label">Product Image URL</label>
         <input
+          className="input-field"
           type="url"
           placeholder="Insert image url"
           value={productData.image}
@@ -57,6 +59,7 @@ function CreateProduct() {
 
         <label>Product Name</label>
         <input 
+          className="input-field"
           type="text"
           placeholder="Insert product name.."
           value={productData.productName}
@@ -66,6 +69,7 @@ function CreateProduct() {
 
         <label>Product Price</label>
         <input 
+          className="input-field"
           type="number"
           placeholder="Insert product price.."
           value={productData.price}
@@ -77,13 +81,14 @@ function CreateProduct() {
 
         <label>Product Description</label>
         <input 
+          className="input-field"
           type="text"
           placeholder="Insert product description.."
           value={productData.description}
           onChange={(event) =>
               setProductData({...productData, description: event.target.value})
           } />
-        <button>Create Product</button> 
+        <button className="button">Create Product</button> 
        
 
       </form>

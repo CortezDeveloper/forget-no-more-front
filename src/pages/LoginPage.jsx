@@ -5,7 +5,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "./../context/AuthContext"
 import NavBar from "./../components/NavBar"
-import Login from "./../style/Login.css"
+import "./../style/Login.css"
 import Footer from "../components/Footer";
 
 function LoginPage({ storeUser }) {

@@ -1,0 +1,40 @@
+/* ColumnLayout.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .input-field {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .button {
+    /* background-color: #007bff; */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  h3{
+    color: maroon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  

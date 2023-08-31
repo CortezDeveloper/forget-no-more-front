@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./../components/NavBar"
 import Footer from "./../components/Footer"
-import Cartpage from "./../style/Cartpage.css"
+import "./../style/Cartpage.css"
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);
@@ -34,7 +34,7 @@ function Cart() {
     return <div className="loading">Shopping Cart</div>;
   }
   return (
-    <div>
+    <div className="container">
       <NavBar />
       <h1 className="cart">Cart</h1>
       <h3>Total price</h3>
@@ -90,8 +90,8 @@ function Cart() {
               </div>
             </div>
             <div className="priceCart">
-              {/* <h3>Price</h3> */}
-              <p>$ {product.currentPrice}</p>
+              <h3>Price</h3>
+              <p>$ {product.price}</p>
             </div>
           </div>
         );

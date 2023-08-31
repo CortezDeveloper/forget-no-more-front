@@ -1,7 +1,8 @@
 import React from 'react'
 import NavBar from './../components/NavBar'
 import Footer from './../components/Footer'
-import Banner from './../components/Banner'
+import Bannerimg from "./../assets/images/fnmbanner.jpg"
+// import Banner from './../components/Banner'
 
 
 
@@ -9,7 +10,8 @@ function HomePage() {
   return (
     <div>
       <NavBar />
-      <Banner />
+      {/* <Banner /> */}
+      <img className="img-banner" src={Bannerimg} />
       <Footer />
     </div>
  

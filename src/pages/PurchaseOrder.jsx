@@ -6,9 +6,9 @@ function Purchase() {
   return (
     <div>
       <NavBar />
-      <h1>PurchaseOrder</h1>
-      <Link to={`/`}>
-        <button>Need more presents ?</button>
+      <h1>Order placed successfully 🎉 🥳 🎊</h1><br></br>
+      <Link to={`/products`}>
+        <button>Need more presents ? Click here 🕺</button>
       </Link>
     </div>
   )

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import {useState, useEffect} from 'react'
 import "./../style/NavBar.css"
 import "./../style/Products.css"
-import "./../components/Footer"
+// import "./../components/Footer"
 import Footer from "./../components/Footer";
 
 
@@ -67,7 +67,7 @@ function Products() {
               <h2>Price</h2>
               <p className="description">$ {product.price}</p><br></br>
               <button className="button" onClick={() => handleClick(product)}>
-                Add to bag
+                Add to bag  👜
              </button>
             </div>
           </div>

@@ -31,6 +31,10 @@ function ProductId({ handleClick }) {
     navigate(`/product/${id}/edit`); // Navigate to the edit page
   };
 
+  const handleCreateClick = () => {
+    navigate(`/createproduct`); // Navigate to the edit page
+  };
+
   return (
     <div>
       <NavBar />
@@ -52,8 +56,11 @@ function ProductId({ handleClick }) {
           {user?.admin && (
             <button className="button" onClick={handleEditClick}>
               Edit
-            </button>
-          )}
+            </button> )}
+          {user?.admin && (
+             <button className="button" onClick={handleCreateClick}>
+           Create
+         </button> )}
         </div>
         <br />
         <br />
