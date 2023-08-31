@@ -1,5 +1,5 @@
 import myApi from "../api/service";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 import { Link } from "react-router-dom"
 import {useState, useEffect} from 'react'
 import "./../style/NavBar.css"
