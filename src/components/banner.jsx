@@ -5,8 +5,7 @@ import Bannerimg from "./../assets/images/fnmbanner.jpg"
 function Banner() {
   return (
     <div>
-      <img className="img-banner" src={Bannerimg} />
-      
+      <img className="img-banner" src={Bannerimg} />    
     </div>
   )
 }

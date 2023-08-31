@@ -8,7 +8,6 @@ import Products from "./pages/Products"
 import CartPage from "./pages/Cartpage"
 import ProductId from "./pages/ProductId"
 import EditProduct from "./pages/EditProductPage"
-import IsLoggedIn from "./components/IsLoggedIn"
 import { useState } from "react"
 import CreateProduct from "./pages/CreateProduct"
 
