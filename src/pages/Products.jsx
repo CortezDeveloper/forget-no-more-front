@@ -24,8 +24,13 @@ function Products() {
   if (products.length === 0) {
     return <div className="loading">Data is being loaded...</div>;
   }
+
+ 
+ 
   const handleClick = (item) => {
-		console.log(item._id)
+    console.log(item._id)
+    const stringifiedCart = JSON.stringify(cart);
+    localStorage.setItem("cart", stringifiedCart);
 		const cartCopy = structuredClone(cart);
 		const foundProduct = cartCopy.find((product) => product._id === item._id)
 		if(!foundProduct) {

@@ -4,16 +4,23 @@ import NavBar from "./../components/NavBar"
 import Footer from "./../components/Footer"
 import Cartpage from "./../style/Cartpage.css"
 
-function Cart({ cart, setCart }) {
+function Cart() {
   const [quantity, setQuantity] = useState(1);
+  const [cart, setCart]=useState([]);
+  useState(() => {
+    const stringifiedCart = localStorage.getItem("cart");
+    setCart(JSON.parse(stringifiedCart)) ;
+    
+  });
+  
   const handleChange = (product) => {
     console.log(product);
-    setQuantity(() => (product.quantity += 1));
+    setQuantity(() => (product.quantity + 1));
   };
   const handleDecrement = (product) => {
     console.log(product);
     if (quantity > 0) {
-      setQuantity(() => (product.quantity -= 1));
+      setQuantity(() => (product.quantity - 1));
     }
   };
   const handleDelete = (product) => {
