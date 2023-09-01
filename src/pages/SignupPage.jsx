@@ -4,6 +4,7 @@ import axios from "axios"
 import NavBar from "./../components/NavBar"
 import "./../style/Signup.css"
 import Footer from "./../components/Footer"
+import myApi from "./../api/service"
 
 function SignupPage() {
 	const [user, setUser] = useState({ userName: "", email: "", password: "" })
@@ -22,7 +23,7 @@ function SignupPage() {
 			// 	password: user.password,
 			// 	email: user.email,
 			// }
-			await axios.post("http://localhost:5005/auth/signup", user)
+			await myApi.post("/auth/signup", user)
 			navigate("/login")
 		} catch (error) {
 			setError(error.message)

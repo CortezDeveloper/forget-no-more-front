@@ -7,6 +7,7 @@ import { UserContext } from "./../context/AuthContext"
 import NavBar from "./../components/NavBar"
 import "./../style/Login.css"
 import Footer from "../components/Footer";
+import myApi from "./../api/service"
 
 function LoginPage({ storeUser }) {
 	const [user, setUser] = useState({ email: "", password: "" })
@@ -18,7 +19,7 @@ function LoginPage({ storeUser }) {
 async function handleSubmit(e) {
 	e.preventDefault()
 	const userLogin = {email: user.email, password: user.password}
-	axios.post("http://localhost:5005/auth/login", userLogin).then((response) => { 
+	myApi.post("/auth/login", userLogin).then((response) => { 
 		console.log(response.data)
 		localStorage.setItem("authToken", response.data.authToken)
 		authenticateUser()
@@ -82,43 +83,4 @@ async function handleSubmit(e) {
 	
 	export default LoginPage;
 
-
-
-	
-
-	
-// 		await authenticateUser(user.userName, user.email, user.password);
-		
-// 		navigate("/"); 
-// 	  } catch (err) {
-// 		setError('Invalid credentials. Please try again.'); // Handle authentication error
-// 	  }
-// }
-	  
-	// async function handleSubmit(e) {
-	// 	e.preventDefault()
-	// 	try {
-	// 		const response = await axios.post(
-	// 			`http://localhost:5005/auth/login`, user
-	// 		)
-	// 		localStorage.setItem(response.data.authToken)
-
-		   
-		 
-	 
-		   // Navigate to a different page after successful login
-	 
-	// 	 } catch (error) {
-	// 	   console.log(error.response.data); 
-	// 	   setError("Login failed. Please check your credentials."); 
-	// 	 }
-	//    }
-			
-			
-	// 		console.log(response)
-			
-	// 	} catch (error) {
-	// 		console.log(error)
-	// 	}
-	// }
 
