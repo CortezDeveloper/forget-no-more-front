@@ -1,0 +1,26 @@
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .img-banner, .img-banner2 {
+    width: 100%; 
+    height: auto;
+    max-width: 100%; 
+    margin-bottom: 10px; 
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .img-banner2 {
+    opacity: 0; 
+  }
+  
+  .img-banner:hover {
+    opacity: 0; 
+  }
+  
+  .img-banner:hover + .img-banner2 {
+    opacity: 1;
+  }
+  
